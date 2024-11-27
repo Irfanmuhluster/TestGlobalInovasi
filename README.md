@@ -19,21 +19,21 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 ## API
 
-GET|HEAD  / .................................................................................................................
-POST      _ignition/execute-solution .......... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
-GET|HEAD  _ignition/health-check ...................... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
-POST      _ignition/update-config ................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
-POST      api/companies/store ....................................................................... CompanyController@store
-POST      api/employees/search ..................................................................... EmployeeController@index
-GET|HEAD  api/employees/search ..................................................................... EmployeeController@index
-POST      api/employees/store ...................................................................... EmployeeController@store
-PUT       api/employees/{id} ...................................................................... EmployeeController@update
-DELETE    api/employees/{id} ..................................................................... EmployeeController@destroy
-GET|HEAD  api/employees/{id} ........................................................................ EmployeeController@show
-POST      api/login .................................................................................... AuthController@login
-POST      api/logout .................................................................................. AuthController@logout
-POST      api/manager/search ........................................................................ ManagerController@index
-PUT       api/manager/{id} ......................................................................... ManagerController@update
-GET|HEAD  api/user ..........................................................................................................
-GET|HEAD  sanctum/csrf-cookie ............................. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
+- GET|HEAD  / .................................................................................................................
+- POST      _ignition/execute-solution .......... ignition.executeSolution › Spatie\LaravelIgnition › ExecuteSolutionController
+- GET|HEAD  _ignition/health-check ...................... ignition.healthCheck › Spatie\LaravelIgnition › HealthCheckController
+- POST      _ignition/update-config ................... ignition.updateConfig › Spatie\LaravelIgnition › UpdateConfigController
+- POST      api/companies/store ....................................................................... CompanyController@store
+- POST      api/employees/search ..................................................................... EmployeeController@index
+- GET|HEAD  api/employees/search ..................................................................... EmployeeController@index
+- POST      api/employees/store ...................................................................... EmployeeController@store
+- PUT       api/employees/{id} ...................................................................... EmployeeController@update
+- DELETE    api/employees/{id} ..................................................................... EmployeeController@destroy
+- GET|HEAD  api/employees/{id} ........................................................................ EmployeeController@show
+- POST      api/login .................................................................................... AuthController@login
+- POST      api/logout .................................................................................. AuthController@logout
+- POST      api/manager/search ........................................................................ ManagerController@index
+- PUT       api/manager/{id} ......................................................................... ManagerController@update
+- GET|HEAD  api/user ..........................................................................................................
+- GET|HEAD  sanctum/csrf-cookie ............................. sanctum.csrf-cookie › Laravel\Sanctum › CsrfCookieController@show
 
