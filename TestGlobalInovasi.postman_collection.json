@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "83d79bfc-f852-4de1-8f7f-cb6ac14b8a26",
+		"name": "CompanyRole",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1470698"
+	},
+	"item": [
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"company_name\" : \"Pt Gilang Dirgantara\",\r\n    \"phone_number\" : \"08532345323\",\r\n    \"address\"   : \"Kulon Progo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:8000/api/companies/store?",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"companies",
+								"store"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNjgyMDQ1LCJleHAiOjE3MzI2ODU2NDUsIm5iZiI6MTczMjY4MjA0NSwianRpIjoiV0J5MzN3cWIzRGVVbE9tTiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Pe1x4LcfBHVbTnSjgeL2lq8nUhiF5OrzPfCbFG5e3Pc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:8000/api/employees/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNjg1NDY4LCJleHAiOjE3MzI2ODkwNjgsIm5iZiI6MTczMjY4NTQ2OCwianRpIjoiSjBIamJBSWo4dTU4VGJhWSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.NHwWGxhtefe_34E20tuipBjl43r2hZ5sKdmZGetQECI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Agus Joyo\",\r\n    \"email\" : \"agusjoyo@mail.com\",\r\n    \"password\" : \"employee123\",\r\n    \"fullname\" : \"Agu Joyo Hadikusumo\",\r\n    \"phone_number\" : \"08542135123\",\r\n    \"address\" : \"Surabaya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}:8000/api/employees/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNjk2MTgzLCJleHAiOjE3MzI2OTk3ODMsIm5iZiI6MTczMjY5NjE4MywianRpIjoiTlNCV2FpTERVR1RrMW1INyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.1vgpUirmgVzSU2O8enFBy7VEcZ76YBkZPnweS3Aoo1s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:8000/api/employees/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "manager",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMyNjk5MzAxLCJleHAiOjE3MzI3MDI5MDEsIm5iZiI6MTczMjY5OTMwMSwianRpIjoiQVVyVGt6MkVxOEN0VDdZeSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TXBA1feShiTA89KUHE1rf7iVk3NpD4huhJYWIlrUNhw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}:8000/api/manager/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"manager",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"dewa23@mail.com\",\r\n    \"password\":\"superadmin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}:8000/api/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "127.0.0.1"
+		},
+		{
+			"key": "token",
+			"value": "access_token"
+		}
+	]
+}
