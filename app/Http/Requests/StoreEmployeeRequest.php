@@ -26,7 +26,7 @@ class StoreEmployeeRequest extends FormRequest
             'fullname' => [
                 'required',
                 'string',
-                    Rule::unique('companies', 'fullname')->whereNull('deleted_at'),
+                    Rule::unique('employees', 'fullname')->whereNull('deleted_at'),
             ],
             'phone_number' => 'required|string|max:255',
             'address' => 'required|string|max:255'

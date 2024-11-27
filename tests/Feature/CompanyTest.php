@@ -9,10 +9,11 @@ use Tests\TestCase;
 
 class CompanyTest extends TestCase
 {
-    use RefreshDatabase;
+    // use RefreshDatabase;
     /**
      * A basic feature test example.
      */
+    /** @test */
     public function only_superadmin_can_create_company(): void
     {
         $superadmin = User::factory()->create();
@@ -21,13 +22,10 @@ class CompanyTest extends TestCase
         // 3. Login Sebagai SuperAdmin
         $this->actingAs($superadmin, 'api');
 
-        $response = $this->postJson('/api/employees/store', [
-            "name" => "Agus Sanjaya",
-            "email" => "agussujatmiko@mail.com",
-            "password" => "employee123",
-            "fullname" => "Agus Joyo HadikusuPermanamo",
-            "phone_number" => "085421351243",
-            "address" => "Surabaya"
+        $response = $this->postJson('/api/companies/store',[
+            "company_name" => "Pt akjlkdsajdflidsjld",
+            "phone_number" => "085323453233",
+            "address"   => "Kulon Progo"
         ]);
 
         $response->assertStatus(201); // Created
