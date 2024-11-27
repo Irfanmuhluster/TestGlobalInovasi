@@ -23,10 +23,10 @@ class CompanyRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'comnapy_name' => [
+            'company_name' => [
                 'required',
                 'string',
-                    Rule::unique('companies', 'comnapy_name')->whereNull('deleted_at'),
+                    Rule::unique('companies', 'company_name')->whereNull('deleted_at'),
             ],
             'phone_number' => 'required|string|max:255'
         ];

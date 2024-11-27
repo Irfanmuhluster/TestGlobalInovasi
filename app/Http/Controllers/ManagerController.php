@@ -78,13 +78,13 @@ class ManagerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Manager $manager)
+    public function update(Request $request,$id)
     {
         //
         DB::beginTransaction();
         try{
             
-            $manager = $this->manager->find($request->id);
+            $manager = $this->manager->find($id);
             $manager->fullname = $request->fullname;
             $manager->address = $request->address;
             $manager->save();
@@ -111,5 +111,22 @@ class ManagerController extends Controller
     public function destroy(Manager $manager)
     {
         //
+        DB::beginTransaction();
+        try{
+            $manager = $this->manager->findOrFail($id);
+            $manager->delete();
+            DB::commit();
+            return response()->json([
+                'message' => 'Manager successfully deleted!',
+                'data' => $manager
+            ], 201);
+        } catch (\Exception $e) {
+            DB::rollback(); 
+
+            return response()->json([
+                'message' => 'Failed to deleted manager!',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
     }
 }
