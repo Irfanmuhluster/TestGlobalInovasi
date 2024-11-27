@@ -26,7 +26,7 @@ Route::post('logout',  [AuthController::class,'logout']);
 Route::middleware(['auth:api', 'role:superadmin'])->group(function () {
     Route::post('/companies/store', [CompanyController::class, 'store']); // Hanya super admin
     // Route::put('/companies/{id}', [CompanyController::class, 'update']);
-    // Route::delete('/companies/{id}', [CompanyController::class, 'destroy']);
+    Route::delete('/companies/{id}', [CompanyController::class, 'destroy']);
 });
 
 
